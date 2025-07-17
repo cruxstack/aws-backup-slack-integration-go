@@ -1,7 +1,5 @@
 # aws-backup-integration-slack-go
 
-**UNDER DEVELOPMENT**
-
 AWS Lambda function that listens to **AWS Backup** events via **Amazon
 EventBridge** and publishes clean, threaded messages to Slack.
 
@@ -26,8 +24,8 @@ EventBridge** and publishes clean, threaded messages to Slack.
 ### Steps
 
 ```bash
-git clone https://github.com/cruxstack/aws-backup-integration-slack.git
-cd aws-backup-integration-slack
+git clone https://github.com/cruxstack/aws-backup-integration-slack-go.git
+cd aws-backup-integration-slack-go
 
 # build static Linux binary for lambda
 GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o bootstrap
