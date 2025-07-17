@@ -35,10 +35,10 @@ func (a *App) ParseEvent(e awsEvent.CloudWatchEvent) (events.StateChangeEvent, e
 // Process handles a single CloudWatch event end-to-end.
 func (a *App) Process(evt awsEvent.CloudWatchEvent) error {
 	sce, err := a.ParseEvent(evt)
-	if err != nil {
+	if err != nil || !sce.IsAlertable() {
 		return err
 	}
-	m0, m1 := sce.BuildMessage()
+	m0, m1 := sce.SlackMessage()
 	_, _, err = a.SlackClient.PostMessage(a.Config.SlackChannel, m0, m1)
 	return err
 }

@@ -5,5 +5,6 @@ import (
 )
 
 type StateChangeEvent interface {
-	BuildMessage() (slack.MsgOption, slack.MsgOption)
+	IsAlertable() bool
+	SlackMessage() (slack.MsgOption, slack.MsgOption)
 }

@@ -1,0 +1,28 @@
+{
+    "display_information": {
+        "name": "AWS Backup",
+        "description": "AWS Backup Bot",
+        "background_color": "#00802f"
+    },
+    "features": {
+        "bot_user": {
+            "display_name": "AWS Backup",
+            "always_online": false
+        }
+    },
+    "oauth_config": {
+        "scopes": {
+            "bot": [
+                "channels:join",
+                "channels:read",
+                "chat:write.public",
+                "chat:write"
+            ]
+        }
+    },
+    "settings": {
+        "org_deploy_enabled": false,
+        "socket_mode_enabled": false,
+        "token_rotation_enabled": false
+    }
+}
