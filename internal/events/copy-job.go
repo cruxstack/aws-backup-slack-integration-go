@@ -12,7 +12,7 @@ import (
 
 type CopyJobStateChange struct {
 	StateChangeEvent
-	CopyJobId     string `json:"backupJobId"`
+	CopyJobId     string `json:"copyJobId"`
 	ResourceArn   string `json:"resourceArn"`
 	ResourceType  string `json:"resourceType"`
 	State         string `json:"state"`

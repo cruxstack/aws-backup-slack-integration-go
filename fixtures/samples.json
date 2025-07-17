@@ -386,5 +386,59 @@
       "creationDate": "2020-06-22T18:50:46.407Z",
       "state": "CREATED"
     }
+  },
+  {
+    "version": "0",
+    "id": "2895aefb-dd4a-0a23-6071-2652abd92c3f",
+    "detail-type": "Backup Plan State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-06-24T23:18:25Z",
+    "region": "us-west-2",
+    "resources": [
+      "arn:aws:backup:us-west-2:1112233445566:backup-plan:83fcb8ee-2d93-42ac-b06f-591563f3f8de"
+    ],
+    "detail": {
+      "backupPlanId": "83fcb8ee-2d93-42ac-b06f-591563f3f8de",
+      "versionId": "NjIwNDFjMDEtNmZlNC00M2JmLTkzZDgtNzNkZjQyNzkxNDk0",
+      "modifiedAt": "2020-06-24T23:18:19.168Z",
+      "state": "MODIFIED"
+    }
+  },
+  {
+    "version": "0",
+    "id": "33fc5c1d-6db2-b3d9-1e70-1c9a2c23645c",
+    "detail-type": "Backup Plan State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-06-24T23:18:25Z",
+    "region": "us-west-2",
+    "resources": [
+      "arn:aws:backup:us-west-2:1112233445566:backup-plan:83fcb8ee-2d93-42ac-b06f-591563f3f8de"
+    ],
+    "detail": {
+      "backupPlanId": "83fcb8ee-2d93-42ac-b06f-591563f3f8de",
+      "versionId": "NjIwNDFjMDEtNmZlNC00M2JmLTkzZDgtNzNkZjQyNzkxNDk0",
+      "deletionDate": "2020-06-24T23:18:19.411Z",
+      "state": "DELETED"
+    }
+  },
+  {
+    "version": "0",
+    "id": "b64fb2d0-ae16-ff9a-faf6-0bdd0d4bfdef",
+    "detail-type": "Backup Plan State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-06-24T23:18:19Z",
+    "region": "us-west-2",
+    "resources": [
+      "arn:aws:backup:us-west-2:1112233445566:backup-plan:2c103c5f-6d6e-4cac-9147-d3afa4c84f59"
+    ],
+    "detail": {
+      "backupPlanId": "2c103c5f-6d6e-4cac-9147-d3afa4c84f59",
+      "versionId": "N2Q4OTczMzEtZmY1My00N2UwLWE3ODUtMjViYWYyOTUzZWY4",
+      "creationDate": "2020-06-24T23:18:15.318Z",
+      "state": "CREATED"
+    }
   }
 ]
