@@ -79,7 +79,7 @@ zip deployment.zip bootstrap
 
 ```bash
 cp .env.example .env # edit the values
-go run .
+go run -C cmd/sample .
 ```
 
 The sample runner replays `fixtures/samples.json` and posts to Slack exactly as
