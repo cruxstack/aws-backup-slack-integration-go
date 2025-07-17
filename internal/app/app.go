@@ -33,6 +33,8 @@ func (a *App) ParseEvent(e awsEvent.CloudWatchEvent) (events.StateChangeEvent, e
 		return events.NewBackupVaultStateChange(e.Detail)
 	case "Copy Job State Change":
 		return events.NewCopyJobStateChange(e.Detail)
+	case "Region Setting State Change":
+		return events.NewRegionSettingStateChange(e.Detail)
 	case "Restore Job State Change":
 		return events.NewRestoreJobStateChange(e.Detail)
 	default:

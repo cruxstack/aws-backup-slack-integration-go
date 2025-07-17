@@ -442,52 +442,69 @@
     }
   },
   {
-  "version": "0",
-  "id": "d415609e-5f35-d9a2-76d1-613683e4e024",
-  "detail-type": "Backup Vault State Change",
-  "source": "aws.backup",
-  "account": "1112233445566",
-  "time": "2020-06-24T23:18:19Z",
-  "region": "us-west-2",
-  "resources": [
-    "arn:aws:backup:us-west-2:1112233445566:backup-vault:d8864642-155c-4283-a168-a04f40e12c97"
-  ],
-  "detail": {
-    "backupVaultName": "d8864642-155c-4283-a168-a04f40e12c97",
-    "state": "CREATED"
-  }
-},
+    "version": "0",
+    "id": "d415609e-5f35-d9a2-76d1-613683e4e024",
+    "detail-type": "Backup Vault State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-06-24T23:18:19Z",
+    "region": "us-west-2",
+    "resources": [
+      "arn:aws:backup:us-west-2:1112233445566:backup-vault:d8864642-155c-4283-a168-a04f40e12c97"
+    ],
+    "detail": {
+      "backupVaultName": "d8864642-155c-4283-a168-a04f40e12c97",
+      "state": "CREATED"
+    }
+  },
   {
-  "version": "0",
-  "id": "1a2b3cd4-5e6f-7g8h-9i0j-123456k7l890",
-  "detail-type": "Backup Vault State Change",
-  "source": "aws.backup",
-  "account": "1112233445566",
-  "time": "2020-06-24T23:18:19Z",
-  "region": "us-west-2",
-  "resources": [
-    "arn:aws:backup:us-west-2:1112233445566:backup-vault:nameOfTestBackup"
-  ],
-  "detail": {
-    "backupVaultName": "vaultName",
-    "state": "MODIFIED",
-    "isLocked": "true"
-  }
-},
+    "version": "0",
+    "id": "1a2b3cd4-5e6f-7g8h-9i0j-123456k7l890",
+    "detail-type": "Backup Vault State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-06-24T23:18:19Z",
+    "region": "us-west-2",
+    "resources": [
+      "arn:aws:backup:us-west-2:1112233445566:backup-vault:nameOfTestBackup"
+    ],
+    "detail": {
+      "backupVaultName": "vaultName",
+      "state": "MODIFIED",
+      "isLocked": "true"
+    }
+  },
   {
-  "version": "0",
-  "id": "344bccc1-6d2e-da93-3adf-b3f82460294d",
-  "detail-type": "Backup Vault State Change",
-  "source": "aws.backup",
-  "account": "1112233445566",
-  "time": "2020-06-22T02:42:37Z",
-  "region": "us-west-2",
-  "resources": [
-    "arn:aws:backup:us-west-2:1112233445566:backup-vault:e8189629-1f8e-4ed2-af7d-b32415d04db1"
-  ],
-  "detail": {
-    "backupVaultName": "e8189629-1f8e-4ed2-af7d-b32415d04db1",
-    "state": "DELETED"
+    "version": "0",
+    "id": "344bccc1-6d2e-da93-3adf-b3f82460294d",
+    "detail-type": "Backup Vault State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-06-22T02:42:37Z",
+    "region": "us-west-2",
+    "resources": [
+      "arn:aws:backup:us-west-2:1112233445566:backup-vault:e8189629-1f8e-4ed2-af7d-b32415d04db1"
+    ],
+    "detail": {
+      "backupVaultName": "e8189629-1f8e-4ed2-af7d-b32415d04db1",
+      "state": "DELETED"
+    }
+  },
+  {
+    "version": "0",
+    "id": "e7ed82ba-4955-4de5-10d6-dbafcfb68b4f",
+    "detail-type": "Region Setting State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-06-24T22:55:03Z",
+    "region": "us-west-2",
+    "resources": [],
+    "detail": {
+      "modifiedAt": "2020-06-24T22:54:57.161Z",
+      "ResourceTypeOptInPreference": {
+        "Aurora": true
+      },
+      "state": "MODIFIED"
+    }
   }
-}
 ]
