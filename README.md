@@ -1,7 +1,5 @@
 # aws-backup-integration-slack-go
 
-**UNDER DEVELOPMENT**
-
 AWS Lambda function that listens to **AWS Backup** events via **Amazon
 EventBridge** and publishes clean, threaded messages to Slack.
 
@@ -26,11 +24,11 @@ EventBridge** and publishes clean, threaded messages to Slack.
 ### Steps
 
 ```bash
-git clone https://github.com/cruxstack/aws-backup-integration-slack.git
-cd aws-backup-integration-slack
+git clone https://github.com/cruxstack/aws-backup-integration-slack-go.git
+cd aws-backup-integration-slack-go
 
 # build static Linux binary for lambda
-GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o bootstrap
+GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -C cmd/lambda -o ../../bootstrap
 
 # package
 zip deployment.zip bootstrap
@@ -56,11 +54,18 @@ zip deployment.zip bootstrap
    * Upload `deployment.zip`
    * Set environment variables above
 3. **EventBridge rule**
-   ```json
-   {
-     "source": ["aws.backup"],
-     "detail-type": ["Backup Job State Change"]
-   }
+    ```json
+    {
+      "source": ["aws.backup"],
+      "detail-type": [
+        "Backup Job State Change",
+        "Backup Plan State Change",
+        "Backup Vault State Change",
+        "Copy Job State Change",
+        "Region Setting State Change",
+        "Restore Job State Change"
+      ]
+    }
    ```
    Target: the Lambda function.
 4. **Slack App**
@@ -75,7 +80,7 @@ zip deployment.zip bootstrap
 
 ```bash
 cp .env.example .env # edit the values
-go run .
+go run -C cmd/sample .
 ```
 
 The sample runner replays `fixtures/samples.json` and posts to Slack exactly as
