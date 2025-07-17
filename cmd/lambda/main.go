@@ -21,7 +21,6 @@ var (
 	initErr error
 )
 
-// LambdaHandler satisfies aws-lambda-go.
 func LambdaHandler(_ context.Context, evt awsevents.CloudWatchEvent) error {
 	once.Do(func() {
 		cfg, err := app.NewConfig()
