@@ -1,0 +1,181 @@
+[
+  {
+    "version": "0",
+    "id": "710b0398-d48e-f3c3-afca-cfeb2fdaa656",
+    "detail-type": "Backup Job State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-07-29T20:15:26Z",
+    "region": "us-west-2",
+    "resources": [],
+    "detail": {
+      "backupJobId": "34176239-e96d-4e1d-9fad-529dbb3c3556",
+      "backupVaultArn": "arn:aws:backup:us-west-2:1112233445566:backup-vault:9ab3e749-82c6-4342-9320-5edbf4918b86",
+      "backupVaultName": "9ab3e749-82c6-4342-9320-5edbf4918b86",
+      "bytesTransferred": "0",
+      "creationDate": "2020-07-29T20:13:07.392Z",
+      "iamRoleArn": "arn:aws:iam::1112233445566:role/MockRCBackupTestRole",
+      "resourceArn": "arn:aws:service:us-west-2:1112233445566:resource-type/resource-id",
+      "resourceType": "type",
+      "state": "FAILED",
+      "statusMessage": "\"Backup job failed because backup vault arn:aws:backup:us-west-2:1112233445566:backup-vault:9ab3e749-82c6-4342-9320-5edbf4918b86 does not exist.\"",
+      "startBy": "2020-07-30T04:13:07.392Z",
+      "percentDone": 0,
+      "retryCount": 3
+    }
+  },
+  {
+    "version": "0",
+    "id": "dafac799-9b88-0134-26b7-fef4d54a134f",
+    "detail-type": "Backup Job State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-07-15T21:41:17Z",
+    "region": "us-west-2",
+    "resources": [
+      "arn:aws:backup:us-west-2:1112233445566:recovery-point:f1d966fe-a3bd-410b-b292-99f442d13b56"
+    ],
+    "detail": {
+      "backupJobId": "a827233a-d405-4a86-a440-759fa94f34dd",
+      "backupSizeInBytes": "36048",
+      "backupVaultArn": "arn:aws:backup:us-west-2:1112233445566:backup-vault:9732c1b4-1091-472a-9d9f-52e0565ee39a",
+      "backupVaultName": "9732c1b4-1091-472a-9d9f-52e0565ee39a",
+      "bytesTransferred": "36048",
+      "creationDate": "2020-07-15T21:40:31.207Z",
+      "iamRoleArn": "arn:aws:iam::1112233445566:role/MockRCBackupTestRole",
+      "resourceArn": "arn:aws:service:us-west-2:1112233445566:resource-type/resource-id",
+      "resourceType": "type",
+      "state": "COMPLETED",
+      "completionDate": "2020-07-15T21:41:05.921Z",
+      "startBy": "2020-07-16T05:40:31.207Z",
+      "percentDone": 100,
+      "retryCount": 3
+    }
+  },
+  {
+    "version": "0",
+    "id": "44946c39-b519-3505-44e6-ba74afeb2e30",
+    "detail-type": "Backup Job State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-07-15T21:39:13Z",
+    "region": "us-west-2",
+    "resources": [],
+    "detail": {
+      "backupJobId": "B6EC38D2-CB3C-EF0A-F5A4-3CF324EF4945",
+      "backupSizeInBytes": "3221225472",
+      "backupVaultArn": "arn:aws:backup:us-west-2:1112233445566:backup-vault:e6625738-0655-4aa9-bd37-6ec1dd183b15",
+      "backupVaultName": "e6625738-0655-4aa9-bd37-6ec1dd183b15",
+      "bytesTransferred": "0",
+      "creationDate": "2020-07-15T21:38:31.152Z",
+      "iamRoleArn": "arn:aws:iam::1112233445566:role/FullBackupTestRole",
+      "resourceArn": "arn:aws:ec2:us-west-2:1112233445566:volume/vol-0b5ae24f2ee72d926",
+      "resourceType": "EBS",
+      "state": "RUNNING",
+      "startBy": "2020-07-16T05:00:00Z",
+      "expectedCompletionDate": "Jul 15, 2020 9:39:07 PM",
+      "percentDone": 99,
+      "createdBy": {
+        "backupPlanId": "bde0f455-4e24-4668-aeaa-4932a97f5cc5",
+        "backupPlanArn": "arn:aws:backup:us-west-2:1112233445566:backup-plan:bde0f455-4e24-4668-aeaa-4932a97f5cc5",
+        "backupPlanVersion": "YTkzNmM0MmUtMWRhNS00Y2RkLThmZGUtNjA5NTc4NGM1YTc5",
+        "backupPlanRuleId": "1f97bafa-14d6-4f39-94fd-94b51bd6d0d5"
+      }
+    }
+  },
+  {
+    "version": "0",
+    "id": "4c91ceb0-b798-da82-6818-c29b3dce7543",
+    "detail-type": "Backup Job State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-07-15T21:33:16Z",
+    "region": "us-west-2",
+    "resources": [],
+    "detail": {
+      "backupJobId": "58cdef95-7680-4c74-80d5-1b64093999c8",
+      "backupVaultArn": "arn:aws:backup:us-west-2:1112233445566:backup-vault:f59bffcd-2538-4bbe-8343-1c60dae27c27",
+      "backupVaultName": "f59bffcd-2538-4bbe-8343-1c60dae27c27",
+      "bytesTransferred": "0",
+      "creationDate": "2020-07-15T21:33:00.803Z",
+      "iamRoleArn": "arn:aws:iam::1112233445566:role/MockRCBackupTestRole",
+      "resourceArn": "arn:aws:service:us-west-2:1112233445566:resource-type/resource-id",
+      "resourceType": "type",
+      "state": "ABORTED",
+      "statusMessage": "\"Backup job was stopped by user.\"",
+      "completionDate": "2020-07-15T21:33:01.621Z",
+      "startBy": "2020-07-16T05:33:00.803Z",
+      "percentDone": 0
+    }
+  },
+  {
+    "version": "0",
+    "id": "1d7bbc04-6120-1145-13b9-49b0af465328",
+    "detail-type": "Backup Job State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-07-29T13:04:57Z",
+    "region": "us-west-2",
+    "resources": [],
+    "detail": {
+      "backupJobId": "01EE26DC-7107-4D8E-0C54-EAC27C662BA4",
+      "backupVaultArn": "arn:aws:backup:us-west-2:1112233445566:backup-vault:aws/backup/AutomatedBackupVaultDel2",
+      "backupVaultName": "aws/backup/AutomatedBackupVaultDel2",
+      "bytesTransferred": "0",
+      "creationDate": "2020-07-29T05:10:20.077Z",
+      "iamRoleArn": "arn:aws:iam::1112233445566:role/MockRCBackupTestRole",
+      "resourceArn": "arn:aws:service:us-west-2:1112233445566:resource-type/resource-id",
+      "resourceType": "type",
+      "state": "EXPIRED",
+      "statusMessage": "\"Backup job failed because there was a running job for the same resource.\"",
+      "completionDate": "2020-07-29T13:02:15.234Z",
+      "startBy": "2020-07-29T13:00:00Z",
+      "percentDone": 0,
+      "createdBy": {
+        "backupPlanId": "aws/efs/414a5bd4-f880-47ad-95f3-f085108a4c3b",
+        "backupPlanArn": "arn:aws:backup:us-west-2:1112233445566:backup-plan:aws/efs/414a5bd4-f880-47ad-95f3-f085108a4c3b",
+        "backupPlanVersion": "NjBjOTUzZjYtYzZiNi00NjhlLWIzMTEtNWRjOWY0YTNjN2Vj",
+        "backupPlanRuleId": "3eb0017c-f262-4211-a802-302cebb11dc2"
+      }
+    }
+  },
+  {
+    "version": "0",
+    "id": "64dd1897-f863-31a3-9ee5-b05e306d81ff",
+    "detail-type": "Backup Job State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-07-29T20:03:30Z",
+    "region": "us-west-2",
+    "resources": [],
+    "detail": {
+      "backupJobId": "2cffdb68-d6ed-485f-9f9b-8b530749f1c2",
+      "backupVaultArn": "arn:aws:backup:us-west-2:1112233445566:backup-vault:ed1f2661-5587-48bf-8a98-fadb977bf975",
+      "backupVaultName": "ed1f2661-5587-48bf-8a98-fadb977bf975",
+      "bytesTransferred": "0",
+      "creationDate": "2020-07-29T20:01:06.224Z",
+      "iamRoleArn": "arn:aws:iam::1112233445566:role/MockRCBackupTestRole",
+      "resourceArn": "arn:aws:service:us-west-2:1112233445566:resource-type/resource-id",
+      "resourceType": "type",
+      "state": "PENDING",
+      "statusMessage": "",
+      "startBy": "2020-07-30T04:01:06.224Z",
+      "percentDone": 0
+    }
+  },
+  {
+    "version": "0",
+    "id": "29af2bf2-eace-58ab-da3a-8c0bf738d692",
+    "detail-type": "Backup Job State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-06-22T20:32:53Z",
+    "region": "us-west-2",
+    "resources": [],
+    "detail": {
+      "backupJobId": "7e8845b5-ca30-415f-a842-e0152bf4d0ca",
+      "state": "CREATED",
+      "creationDate": "2020-06-22T20:32:47.466Z"
+    }
+  }
+]
