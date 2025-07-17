@@ -56,11 +56,15 @@ zip deployment.zip bootstrap
    * Upload `deployment.zip`
    * Set environment variables above
 3. **EventBridge rule**
-   ```json
-   {
-     "source": ["aws.backup"],
-     "detail-type": ["Backup Job State Change"]
-   }
+    ```json
+    {
+      "source": ["aws.backup"],
+      "detail-type": [
+        "Backup Job State Change",
+        "Copy Job State Change",
+        "Restore Job State Change"
+      ]
+    }
    ```
    Target: the Lambda function.
 4. **Slack App**
