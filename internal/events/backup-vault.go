@@ -7,23 +7,24 @@ import (
 	"github.com/slack-go/slack"
 )
 
-type BackupPlanStateChange struct {
+type BackupVaultStateChange struct {
 	StateChangeEvent
-	BackupPlanId  string `json:"backupPlanId"`
-	VersionId     string `json:"versionId"`
+	BackupVaultId string `json:"backupVaultId"`
 	State         string `json:"state"`
+	IsLocked      string `json:"isLocked"`
 	StatusMessage string `json:"statusMessage"`
 	Raw           string `json:"-"`
 }
 
-func (sce *BackupPlanStateChange) SlackMessage() (slack.MsgOption, slack.MsgOption) {
+func (sce *BackupVaultStateChange) SlackMessage() (slack.MsgOption, slack.MsgOption) {
 	var blocks []slack.Block
 
-	header := slack.NewHeaderBlock(slack.NewTextBlockObject("plain_text", "Backup Plan Change", false, false))
+	header := slack.NewHeaderBlock(slack.NewTextBlockObject("plain_text", "Backup Vault Change", false, false))
 	blocks = append(blocks, header)
 
 	var details []*slack.TextBlockObject
 	details = append(details, slack.NewTextBlockObject("mrkdwn", fmt.Sprintf("*State*\n%s", sce.State), false, false))
+	details = append(details, slack.NewTextBlockObject("mrkdwn", fmt.Sprintf("*Locked*\n%s", sce.IsLocked), false, false))
 	blocks = append(blocks, slack.NewSectionBlock(nil, details, nil))
 
 	if sce.StatusMessage != "" {
@@ -36,15 +37,18 @@ func (sce *BackupPlanStateChange) SlackMessage() (slack.MsgOption, slack.MsgOpti
 	return slack.MsgOptionText(sce.StatusMessage, false), slack.MsgOptionBlocks(blocks...)
 }
 
-func (sce *BackupPlanStateChange) IsAlertable() bool {
+func (sce *BackupVaultStateChange) IsAlertable() bool {
 	return true
 }
 
-func NewBackupPlanStateChange(raw json.RawMessage) (*BackupPlanStateChange, error) {
-	var sce BackupPlanStateChange
+func NewBackupVaultStateChange(raw json.RawMessage) (*BackupVaultStateChange, error) {
+	var sce BackupVaultStateChange
 	if err := json.Unmarshal(raw, &sce); err != nil {
-		return &BackupPlanStateChange{}, err
+		return &BackupVaultStateChange{}, err
 	}
-	sce.StatusMessage = "AWS Backup service backup plan was changed. Please confirm it was intended."
+	if sce.IsLocked == "" {
+		sce.IsLocked = "false"
+	}
+	sce.StatusMessage = "AWS Backup service backup vault was changed. Please confirm it was intended."
 	return &sce, nil
 }

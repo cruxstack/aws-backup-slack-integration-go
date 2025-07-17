@@ -29,6 +29,8 @@ func (a *App) ParseEvent(e awsEvent.CloudWatchEvent) (events.StateChangeEvent, e
 		return events.NewBackupJobStateChange(e.Detail)
 	case "Backup Plan State Change":
 		return events.NewBackupPlanStateChange(e.Detail)
+	case "Backup Vault State Change":
+		return events.NewBackupVaultStateChange(e.Detail)
 	case "Copy Job State Change":
 		return events.NewCopyJobStateChange(e.Detail)
 	case "Restore Job State Change":
