@@ -282,5 +282,109 @@
       "sourceBackupVaultArn": "arn:aws:backup:us-west-2:1112233445566:backup-vault:ef09da5a-21a6-461f-a98f-857e9e621a17",
       "destinationBackupVaultArn": "arn:aws:backup:us-west-2:1112233445566:backup-vault:ef09da5a-21a6-461f-a98f-857e9e621a17"
     }
+  },
+  {
+    "version": "0",
+    "id": "ab32977c-378d-2122-e985-fgh4596f0709",
+    "detail-type": "Restore Job State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-07-15T20:19:29Z",
+    "region": "us-west-2",
+    "resources": [
+      "arn:aws:ec2:us-west-2::image/ami-12b3456dfb7f8cf90"
+    ],
+    "detail": {
+      "restoreJobId": "1B234A56-789B-01CD-2A34-4567A08901FD",
+      "backupSizeInBytes": "22548578304",
+      "creationDate": "2020-07-15T20:19:07.303Z",
+      "iamRoleArn": "arn:aws:iam::1112233445566:role/TestAWSBackupRole",
+      "percentDone": 0,
+      "resourceType": "EC2",
+      "status": "FAILED",
+      "statusMessage": "AWS Backup does not permit attaching a new instance profile to an EC2 instance. Please restore using the backed up instance profile."
+    }
+  },
+  {
+    "version": "0",
+    "id": "ab32977c-378d-2122-e985-fgh4596f0709",
+    "detail-type": "Restore Job State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-07-29T20:26:06Z",
+    "region": "us-west-2",
+    "resources": [
+      "arn:aws:ec2:us-west-2::snapshot/snap-0fe123ca456cfad7c"
+    ],
+    "detail": {
+      "restoreJobId": "1B234A56-789B-01CD-2A34-4567A08901FD",
+      "backupSizeInBytes": "3221225472",
+      "creationDate": "2020-07-29T20:26:00.098Z",
+      "iamRoleArn": "arn:aws:iam::1112233445566:role/RestoreTestRole",
+      "percentDone": 0,
+      "resourceType": "EBS",
+      "status": "RUNNING"
+    }
+  },
+  {
+    "version": "0",
+    "id": "ab32977c-378d-2122-e985-fgh4596f0709",
+    "detail-type": "Restore Job State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-07-15T03:14:58Z",
+    "region": "us-west-2",
+    "resources": [
+      "arn:aws:rds:us-west-2:1112233445566:snapshot:awsbackup:job-1a2bcd34-567e-8901-23f4-5g6hijkl7890"
+    ],
+    "detail": {
+      "restoreJobId": "AB123456-78C9-0123-456D-789012E34567",
+      "backupSizeInBytes": "0",
+      "creationDate": "2020-07-15T03:10:01.742Z",
+      "iamRoleArn": "arn:aws:iam::1112233445566:role/RestoreTestRole",
+      "percentDone": 0,
+      "resourceType": "RDS",
+      "status": "COMPLETED",
+      "createdResourceArn": "arn:aws:rds:us-west-2:1112233445566:db:testinginstance1a2bcd34-567e-8901-23f4-5g6hijkl7890",
+      "completionDate": "2020-07-15T03:14:53.128Z"
+    }
+  },
+  {
+    "version": "0",
+    "id": "ab32977c-378d-2122-e985-fgh4596f0709",
+    "detail-type": "Restore Job State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-07-29T20:08:26Z",
+    "region": "us-west-2",
+    "resources": [
+      "arn:aws:backup:us-west-2:1112233445566:recovery-point:42bb8260-92cd-46a2-ab8d-b29f4edb47b1"
+    ],
+    "detail": {
+      "restoreJobId": "123EA45F-C678-EFE9-0123-4D56FC0E789A",
+      "backupSizeInBytes": "36048",
+      "creationDate": "2020-07-29T20:08:21.083Z",
+      "iamRoleArn": "arn:aws:iam::1112233445566:role/RestoreTestRole",
+      "percentDone": 0,
+      "resourceType": "EC2",
+      "status": "PENDING"
+    }
+  },
+  {
+    "version": "0",
+    "id": "ab32977c-378d-2122-e985-fgh4596f0709",
+    "detail-type": "Restore Job State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-06-22T18:50:49Z",
+    "region": "us-west-2",
+    "resources": [
+      "arn:aws:backup:us-west-2:1112233445566:recovery-point:a6560b33-3660-494c-8d47-efgh939ij32k"
+    ],
+    "detail": {
+      "restoreJobId": "123EA45F-C678-EFE9-0123-4D56FC0E789A",
+      "creationDate": "2020-06-22T18:50:46.407Z",
+      "state": "CREATED"
+    }
   }
 ]

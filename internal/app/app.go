@@ -29,6 +29,8 @@ func (a *App) ParseEvent(e awsEvent.CloudWatchEvent) (events.StateChangeEvent, e
 		return events.NewBackupJobStateChange(e.Detail)
 	case "Copy Job State Change":
 		return events.NewCopyJobStateChange(e.Detail)
+	case "Restore Job State Change":
+		return events.NewRestoreJobStateChange(e.Detail)
 	default:
 		return nil, fmt.Errorf("unknown cloudwatch event type: %s", e.DetailType)
 	}
