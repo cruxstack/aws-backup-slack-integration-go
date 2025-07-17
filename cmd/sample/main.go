@@ -25,7 +25,7 @@ func main() {
 	}
 	a := app.New(cfg)
 
-	path := filepath.Join("..", "..", "fixtures", "samples-backup-job.json")
+	path := filepath.Join("..", "..", "fixtures", "samples.json")
 	raw, err := os.ReadFile(path)
 	if err != nil {
 		log.Fatal(err)
