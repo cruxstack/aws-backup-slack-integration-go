@@ -19,10 +19,9 @@ func NewConfig() (*Config, error) {
 	debugEnabled, _ := strconv.ParseBool(os.Getenv("APP_DEBUG_ENABLED"))
 
 	cfg := Config{
-		DebugEnabled:  debugEnabled,
-		AwsConsoleURL: os.Getenv("APP_AWS_CONSOLE_URL"),
-		SlackToken:    os.Getenv("APP_SLACK_TOKEN"),
-		SlackChannel:  os.Getenv("APP_SLACK_CHANNEL"),
+		DebugEnabled: debugEnabled,
+		SlackToken:   os.Getenv("APP_SLACK_TOKEN"),
+		SlackChannel: os.Getenv("APP_SLACK_CHANNEL"),
 	}
 
 	missing := []string{}
