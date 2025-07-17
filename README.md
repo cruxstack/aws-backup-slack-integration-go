@@ -59,7 +59,10 @@ zip deployment.zip bootstrap
       "source": ["aws.backup"],
       "detail-type": [
         "Backup Job State Change",
+        "Backup Plan State Change",
+        "Backup Vault State Change",
         "Copy Job State Change",
+        "Region Setting State Change",
         "Restore Job State Change"
       ]
     }
