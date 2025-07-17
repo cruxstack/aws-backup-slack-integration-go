@@ -28,7 +28,7 @@ git clone https://github.com/cruxstack/aws-backup-integration-slack-go.git
 cd aws-backup-integration-slack-go
 
 # build static Linux binary for lambda
-GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o bootstrap
+GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -C cmd/lambda -o ../../bootstrap
 
 # package
 zip deployment.zip bootstrap
