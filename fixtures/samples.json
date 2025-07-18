@@ -506,5 +506,79 @@
       },
       "state": "MODIFIED"
     }
+  },
+  {
+    "version": "0",
+    "id": "ab32977c-378d-2122-e985-fgh4596f0709",
+    "detail-type": "Recovery Point State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-07-15T21:39:07Z",
+    "region": "us-west-2",
+    "resources": [
+      "arn:aws:rds:us-west-2:1112233445566:cluster-snapshot:awsbackup:job-4ece7121-d60e-00c2-5c3b-49960142d03b"
+    ],
+    "detail": {
+      "backupVaultName": "e6625738-0655-4aa9-bd37-6ec1dd183b15",
+      "backupVaultArn": "arn:aws:backup:us-west-2:496821122410:backup-vault:e6625738-0655-4aa9-bd37-6ec1dd183b15",
+      "creationDate": "2020-07-15T21:38:31.152Z",
+      "iamRoleArn": "arn:aws:iam::1112233445566:role/FullBackupTestRole",
+      "resourceType": "Aurora",
+      "resourceArn": "arn:aws:rds:us-west-2:1112233445566:cluster:id",
+      "status": "DELETED",
+      "deletedBy": "MANUAL_DELETE",
+      "isEncrypted": "false",
+      "storageClass": "WARM",
+      "initiationDate": "2025-06-15T07:37:15.911Z",
+      "completionDate": "2020-07-15T21:39:05.689Z",
+      "createdBy": {
+        "backupPlanId": "bde0f455-4e24-4668-aeaa-4932a97f5cc5",
+        "backupPlanArn": "arn:aws:backup:us-west-2:1112233445566:backup-plan:bde0f455-4e24-4668-aeaa-4932a97f5cc5",
+        "backupPlanVersion": "YTkzNmM0MmUtMWRhNS00Y2RkLThmZGUtNjA5NTc4NGM1YTc5",
+        "backupPlanRuleId": "1f97bafa-14d6-4f39-94fd-94b51bd6d0d5"
+      },
+      "lifecycle": {
+        "deleteAfterDays": 100
+      },
+      "calculatedLifeCycle": {
+        "deleteAt": "2020-10-23T21:38:31.152Z"
+      }
+    }
+  },
+  {
+    "version": "0",
+    "id": "ab32977c-378d-2122-e985-fgh4596f0709",
+    "detail-type": "Recovery Point State Change",
+    "source": "aws.backup",
+    "account": "1112233445566",
+    "time": "2020-07-15T21:39:07Z",
+    "region": "us-west-2",
+    "resources": [
+      "arn:aws:rds:us-west-2:1112233445566:cluster-snapshot:awsbackup:job-4ece7121-d60e-00c2-5c3b-49960142d03b"
+    ],
+    "detail": {
+      "backupVaultName": "e6625738-0655-4aa9-bd37-6ec1dd183b15",
+      "backupVaultArn": "arn:aws:backup:us-west-2:496821122410:backup-vault:e6625738-0655-4aa9-bd37-6ec1dd183b15",
+      "creationDate": "2020-07-15T21:38:31.152Z",
+      "iamRoleArn": "arn:aws:iam::1112233445566:role/FullBackupTestRole",
+      "resourceType": "Aurora",
+      "resourceArn": "arn:aws:rds:us-west-2:1112233445566:cluster:id",
+      "status": "COMPLETED",
+      "isEncrypted": "false",
+      "storageClass": "WARM",
+      "completionDate": "2020-07-15T21:39:05.689Z",
+      "createdBy": {
+        "backupPlanId": "bde0f455-4e24-4668-aeaa-4932a97f5cc5",
+        "backupPlanArn": "arn:aws:backup:us-west-2:1112233445566:backup-plan:bde0f455-4e24-4668-aeaa-4932a97f5cc5",
+        "backupPlanVersion": "YTkzNmM0MmUtMWRhNS00Y2RkLThmZGUtNjA5NTc4NGM1YTc5",
+        "backupPlanRuleId": "1f97bafa-14d6-4f39-94fd-94b51bd6d0d5"
+      },
+      "lifecycle": {
+        "deleteAfterDays": 100
+      },
+      "calculatedLifeCycle": {
+        "deleteAt": "2020-10-23T21:38:31.152Z"
+      }
+    }
   }
 ]
