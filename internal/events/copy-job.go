@@ -54,7 +54,7 @@ func (sce *CopyJobStateChange) SlackMessage() (slack.MsgOption, slack.MsgOption)
 
 func (sce *CopyJobStateChange) IsAlertable() bool {
 	failedStates := []string{"FAILED"}
-	return slices.Contains(failedStates, sce.State)
+	return slices.Contains(failedStates, sce.State) && !strings.Contains(sce.StatusMessage, "not within the range")
 }
 
 func NewCopyJobStateChange(raw json.RawMessage) (*CopyJobStateChange, error) {
